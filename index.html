@@ -278,7 +278,10 @@ const PROGRAMS=[
   gain:"SimProject llega a la especialización con el mismo simulador que ya conocen los pregrados."},
  {id:"eim",name:"Especialización en Inteligencia de Mercados y Comercio Electrónico",short:"Esp. Inteligencia de Mercados y Comercio Electrónico",unit:"Per.",d:[[1,"Investigación de Mercado","FOCUS","N5"],[2,"Mercadeo Internacional","GlobalMarket","N6-7"]],
   s:[[2,"Gerencia Financiera para Mercadeo","Corbatul","N3-4"],[2,"Finanzas y Negocios Internacionales","Global 2020","N6-7"],[2,"Inteligencia de Mercados y Entorno Empresarial","Business Strategy","N6-7"]],
-  gain:"FOCUS y GlobalMarket son de aplicación directa: el estudiante decide sobre mercados que responden a sus decisiones."}
+  gain:"FOCUS y GlobalMarket son de aplicación directa: el estudiante decide sobre mercados que responden a sus decisiones."},
+ {id:"moi",name:"Maestría en Operaciones Inteligentes",unit:"Per.",d:[[2,"Electiva II (Juego Gerencial)","Business Global","N5"]],
+  s:[[1,"Gestión Estratégica de Operaciones","Business Strategy","N6-7"],[1,"Electiva I · línea Sostenibilidad Operacional","ESG Management","N5"],[2,"Cadenas de Suministro Inteligentes","Global 2020","N6-7"],[2,"Laboratorio de Sistemas Operacionales","Milk Factory","N5"],[3,"Laboratorio de Casos Operacionales","SimProject","N3-5"]],
+  gain:"Business Global entra de forma directa en la Electiva de Juego Gerencial. Los demás simuladores acompañan la estrategia de operaciones, la sostenibilidad, las cadenas de suministro y los laboratorios del programa."}
 ];
 const SIMS=[
  {id:"simventure",name:"SimVenture Validate",fam:"Emprendimiento",k:"e",lv:[1,2],
@@ -328,19 +331,19 @@ S.push(`<section class="slide s-cover">
  <div class="cover-l">
   <img src="assets/logo-sdn.png" alt="Simuladores de Negocios Colombia">
   <span class="kicker">Mapeo curricular · Sede Bogotá</span>
-  <h1>Universidad La Gran Colombia<span>Mapeo curricular de simuladores de negocio para cinco programas</span></h1>
-  <div class="cover-nums"><div><b>62</b><span>asignaturas</span></div><div><b>5</b><span>programas</span></div><div><b>33</b><span>simuladores</span></div><div><b>32</b><span>sin cambiar el temario</span></div></div>
+  <h1>Universidad La Gran Colombia<span>Mapeo curricular de simuladores de negocio para seis programas</span></h1>
+  <div class="cover-nums"><div><b>68</b><span>asignaturas</span></div><div><b>6</b><span>programas</span></div><div><b>33</b><span>simuladores</span></div><div><b>33</b><span>sin cambiar el temario</span></div></div>
  </div>
 </section>`);
 
 // 2. Cifras
 page("Resumen","c",`<span class="kicker">Lo que ya se puede hacer hoy</span>
- <h2 class="title">62 asignaturas pueden trabajarse <em>hoy</em> con un simulador</h2>
- <p class="lead">Revisamos asignatura por asignatura tres pregrados y dos especializaciones de la Universidad.</p>
+ <h2 class="title">68 asignaturas pueden trabajarse <em>hoy</em> con un simulador</h2>
+ <p class="lead">Revisamos asignatura por asignatura tres pregrados, dos especializaciones y una maestría de la Universidad.</p>
  <div class="figs">
-  <div><b>62</b><strong>Asignaturas</strong><span>de primer a último semestre</span></div>
-  <div><b>32</b><strong>Directas</strong><span>sin cambiar el temario</span></div>
-  <div><b>30</b><strong>De apoyo</strong><span>el docente conserva el control</span></div>
+  <div><b>68</b><strong>Asignaturas</strong><span>de primer a último semestre</span></div>
+  <div><b>33</b><strong>Directas</strong><span>sin cambiar el temario</span></div>
+  <div><b>35</b><strong>De apoyo</strong><span>el docente conserva el control</span></div>
   <div><b>33</b><strong>Simuladores</strong><span>de nivel N1 a N7</span></div>
  </div>`);
 
@@ -353,10 +356,10 @@ divider("c","Simuladores especializados","Siete simuladores que llevan a la prá
 
 // 6. Los siete
 page("Especializados","c",`<span class="kicker">Simuladores especializados</span>
- <h2 class="title">Siete simuladores presentes en <em>11 asignaturas</em></h2>
+ <h2 class="title">Siete simuladores presentes en <em>12 asignaturas</em></h2>
  <div class="key"><span><i style="background:var(--cyan)"></i>Emprendimiento y proyectos</span><span><i style="background:var(--blue)"></i>Nuevos desarrollos · Contaduría</span></div>
  <div class="seven">${SIMS.map(s=>`<a class="tile ${s.k}" data-go="${s.id}" tabindex="0"><span class="f">${s.fam}</span><span class="n">${s.name}</span></a>`).join("")}
-  <div class="tile sum"><span class="f">En la Universidad</span><span class="n">4 de 5 programas</span></div></div>`);
+  <div class="tile sum"><span class="f">En la Universidad</span><span class="n">5 de 6 programas</span></div></div>`);
 
 // 7-13. Un simulador por diapositiva
 SIMS.forEach((s,i)=>{
@@ -374,25 +377,25 @@ SIMS.forEach((s,i)=>{
 });
 
 // Divisor programas
-divider("b","Programas","Tres pregrados y dos especializaciones con asignaturas listas para empezar.","Sección 02");
+divider("b","Programas","Tres pregrados, dos especializaciones y una maestría con asignaturas listas para empezar.","Sección 02");
 
 // 16. Alcance
 page("Alcance","b",`<span class="kicker">Alcance por programa</span>
- <h2 class="title">Los cinco programas pueden <em>empezar ya</em></h2>
+ <h2 class="title">Los seis programas pueden <em>empezar ya</em></h2>
  <div class="tblwrap"><table class="tbl"><thead><tr><th>Programa</th><th class="num">Total</th><th class="num">Directo</th><th class="num">Apoyo</th></tr></thead><tbody>
  ${PROGRAMS.map(p=>`<tr><td><b>${p.short||p.name}</b></td><td class="num">${p.d.length+p.s.length}</td><td class="num" style="color:var(--blue)">${p.d.length}</td><td class="num" style="color:var(--g3)">${p.s.length}</td></tr>`).join("")}
- <tr class="total"><td>Total</td><td class="num">62</td><td class="num" style="color:var(--blue)">32</td><td class="num" style="color:var(--g3)">30</td></tr>
+ <tr class="total"><td>Total</td><td class="num">${PROGRAMS.reduce((a,p)=>a+p.d.length+p.s.length,0)}</td><td class="num" style="color:var(--blue)">${PROGRAMS.reduce((a,p)=>a+p.d.length,0)}</td><td class="num" style="color:var(--g3)">${PROGRAMS.reduce((a,p)=>a+p.s.length,0)}</td></tr>
  </tbody></table></div>`);
 
 // Fichas por programa
 const rowsT=(list,unit,cls="")=>`<div class="tblwrap"><table class="tbl ${cls}"><thead><tr><th>${unit}</th><th>Asignatura</th><th>Simulador</th></tr></thead><tbody>${list.map(r=>`<tr><td class="semc">${r[0]}</td><td>${esc(r[1])}</td><td class="simn">${esc(r[2])}</td></tr>`).join("")}</tbody></table></div>`;
-const progTop=(p,i,sub)=>`<div class="prog-top"><div style="display:grid;gap:14px"><span class="kicker">Programa ${i+1} de 5${sub?" · "+sub:""}</span><h2 class="title" style="font-size:calc(var(--u)*${(p.short||p.name).length>30?44:56})">${p.short||p.name}</h2></div>
+const progTop=(p,i,sub)=>`<div class="prog-top"><div style="display:grid;gap:14px"><span class="kicker">Programa ${i+1} de ${PROGRAMS.length}${sub?" · "+sub:""}</span><h2 class="title" style="font-size:calc(var(--u)*${(p.short||p.name).length>30?44:56})">${p.short||p.name}</h2></div>
  <div class="prog-nums"><div><b>${p.d.length+p.s.length}</b><span>Total</span></div><div><b style="color:var(--blue)">${p.d.length}</b><span>Directo</span></div><div><b style="color:var(--g3)">${p.s.length}</b><span>Apoyo</span></div></div></div>`;
 const kind=t=>t==="d"?`<span class="kind"><span class="st d">Directo</span>Sin cambiar el temario</span>`:`<span class="kind"><span class="st s">Apoyo</span>El docente conserva el control</span>`;
 // Máximo 5 filas por diapositiva y una sola tabla ancha, para que respire
 const chunks=l=>{const n=Math.ceil(l.length/5),z=Math.ceil(l.length/n),o=[];for(let k=0;k<l.length;k+=z)o.push(l.slice(k,k+z));return o};
 PROGRAMS.forEach((p,i)=>{
- const rail=["Administración","Contaduría","Economía","Esp. Gerencia","Esp. Mercados"][i];
+ const rail=["Administración","Contaduría","Economía","Esp. Gerencia","Esp. Mercados","Maestría"][i];
  const parts=[...chunks(p.d).map(c=>["d",c]),...chunks(p.s).map(c=>["s",c])];
  parts.forEach(([t,c],k)=>{const last=k===parts.length-1;
   page(rail,"b",`${progTop(p,i,parts.length>1?(k+1)+" de "+parts.length:"")}${kind(t)}${rowsT(c,p.unit)}${last&&c.length<=4?`<p class="gain">${p.gain}</p>`:""}`)});

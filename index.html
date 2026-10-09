@@ -20,8 +20,8 @@ body{margin:0; background:#E6E6E6; color:var(--ink); font-family:var(--f-text); 
 h1,h2,h3,p{margin:0}
 h1,h2,h3{font-family:var(--f-title); font-weight:700; text-wrap:balance; letter-spacing:0}
 
-.viewport{position:fixed; inset:0; display:grid; place-items:center}
-.stage{width:1840px; height:1035px; position:relative; transform-origin:center; flex:none}
+.viewport{position:fixed; inset:0; overflow:hidden}
+.stage{width:1980px; height:1114px; position:absolute; left:0; top:0; transform-origin:0 0}
 .slide{position:absolute; inset:0; background:var(--white); overflow:hidden; display:none; box-sizing:border-box; font-size:calc(var(--u)*27); line-height:1.5}
 .slide.on{display:flex; animation:in .4s ease both}
 @keyframes in{from{transform:translateX(16px)}to{transform:none}}
@@ -224,7 +224,7 @@ h1,h2,h3{font-family:var(--f-title); font-weight:700; text-wrap:balance; letter-
 /* Celular: diapositivas apiladas */
 body.flow{overflow:auto; background:var(--white); --u:.6px}
 body.flow .viewport{position:static; display:block}
-body.flow .stage{width:auto; height:auto; transform:none !important}
+body.flow .stage{position:static; width:auto !important; height:auto !important; transform:none !important}
 body.flow .slide{position:relative; display:flex !important; flex-direction:column; animation:none; font-size:16px}
 body.flow .rail{width:auto; padding:14px 16px; justify-content:flex-start}
 body.flow .rail span{writing-mode:horizontal-tb; transform:none; font-size:18px}
@@ -471,7 +471,7 @@ function show(i){
 function fit(){
  const flow=innerWidth<820||innerHeight>innerWidth*1.1;
  document.body.classList.toggle("flow",flow);
- const k=Math.min(innerWidth/1840,innerHeight/1035);
+ const k=Math.min(innerWidth/1980,innerHeight/1114);
  stage.style.width=flow?"":(innerWidth/k)+"px"; stage.style.height=flow?"":(innerHeight/k)+"px";
  stage.style.transform=flow?"":`scale(${k})`;
 }
